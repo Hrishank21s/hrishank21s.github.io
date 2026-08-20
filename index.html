@@ -31,7 +31,7 @@
       <a href="#why" data-nav>Why us</a>
     </nav>
     <div class="nav-actions">
-      <a href="mailto:hrishank21s@gmail.com?subject=TableTrackr%20demo%20request" class="btn btn-ghost nav-cta-desktop">Request a demo</a>
+      <button type="button" class="btn btn-ghost nav-cta-desktop" data-open-contact>Request a demo</button>
       <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
       </button>
@@ -44,7 +44,7 @@
     <a href="#clubs" data-nav>Clubs</a>
     <a href="#billing" data-nav>Billing</a>
     <a href="#why" data-nav>Why us</a>
-    <a href="mailto:hrishank21s@gmail.com?subject=TableTrackr%20demo%20request" class="btn btn-primary">Request a demo</a>
+    <button type="button" class="btn btn-primary" data-open-contact>Request a demo</button>
   </div>
 </header>
 
@@ -64,7 +64,7 @@
           <span>TABLES</span><span class="sep">•</span><span>BOOKINGS</span><span class="sep">•</span><span>CUSTOMERS</span><span class="sep">•</span><span>BILLING</span>
         </div>
         <div class="hero-actions">
-          <a href="mailto:hrishank21s@gmail.com?subject=TableTrackr%20demo%20request" class="btn btn-primary">Request a demo</a>
+          <button type="button" class="btn btn-primary" data-open-contact>Request a demo</button>
           <a href="#demo" class="btn btn-ghost">See it live ↓</a>
         </div>
         <p class="hero-footnote">Designed to grow with your club.</p>
@@ -356,7 +356,7 @@
       <span class="eyebrow"><span class="eyebrow-dot"></span>TABLETRACKR</span>
       <h2 class="cta-h">Manage.<br>Track.<br><span class="accent-text">Grow.</span></h2>
       <p class="lede">Start with table tracking. Add billing, customers, bookings and more whenever the club is ready.</p>
-      <a href="mailto:hrishank21s@gmail.com?subject=TableTrackr%20demo%20request" class="btn btn-primary btn-lg">A smarter way to run your club.</a>
+      <button type="button" class="btn btn-primary btn-lg" data-open-contact>A smarter way to run your club.</button>
     </div>
   </section>
 
@@ -375,6 +375,39 @@
     <p class="footer-copy">© <span id="year"></span> TableTrackr. Built by Hrishank.</p>
   </div>
 </footer>
+
+<div class="modal-overlay" id="contactOverlay" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <button type="button" class="modal-close" id="contactClose" aria-label="Close">&times;</button>
+    <span class="eyebrow"><span class="eyebrow-dot"></span>GET IN TOUCH</span>
+    <h3 id="contactTitle">Request a demo</h3>
+    <p class="modal-sub">Leave your details and I'll reach out to set up a walkthrough for your club.</p>
+
+    <form id="contactForm" class="contact-form" novalidate>
+      <label>
+        <span>Name</span>
+        <input type="text" name="name" id="cf-name" required autocomplete="name" placeholder="Rahul Sharma">
+      </label>
+      <label>
+        <span>Phone</span>
+        <input type="tel" name="phone" id="cf-phone" required autocomplete="tel" placeholder="98765 43210">
+      </label>
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" id="cf-email" required autocomplete="email" placeholder="you@club.com">
+      </label>
+      <label class="hp-field" aria-hidden="true">
+        <span>Leave blank</span>
+        <input type="text" name="company" tabindex="-1" autocomplete="off">
+      </label>
+
+      <button type="submit" class="btn btn-primary contact-submit" id="cf-submit">Send request</button>
+      <p class="contact-status" id="cf-status" role="status"></p>
+    </form>
+
+    <p class="modal-fallback">Prefer email? Write to <a href="mailto:hrishank21s@gmail.com">hrishank21s@gmail.com</a> directly.</p>
+  </div>
+</div>
 
 <script src="assets/script.js"></script>
 </body>

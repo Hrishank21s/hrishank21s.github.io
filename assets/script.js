@@ -202,3 +202,82 @@ setInterval(() => {
     demoClock.textContent = new Date().toLocaleTimeString('en-IN', { hour12:false });
   }
 }, 1000);
+
+/* ---- contact modal + lead capture ---- */
+// Set this to your Apps Script Web App URL once deployed (see setup notes in README).
+const LEAD_WEBHOOK_URL = 'PASTE_APPS_SCRIPT_WEB_APP_URL_HERE';
+
+const contactOverlay = document.getElementById('contactOverlay');
+const contactForm = document.getElementById('contactForm');
+const contactClose = document.getElementById('contactClose');
+const cfSubmit = document.getElementById('cf-submit');
+const cfStatus = document.getElementById('cf-status');
+let lastFocused = null;
+
+function openContact(){
+  lastFocused = document.activeElement;
+  contactOverlay.classList.add('open');
+  contactOverlay.setAttribute('aria-hidden', 'false');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('cf-name').focus(), 250);
+}
+function closeContact(){
+  contactOverlay.classList.remove('open');
+  contactOverlay.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+  if (lastFocused) lastFocused.focus();
+}
+
+document.querySelectorAll('[data-open-contact]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    nav.classList.remove('open');
+    mobileMenu.classList.remove('open');
+    openContact();
+  });
+});
+contactClose.addEventListener('click', closeContact);
+contactOverlay.addEventListener('click', (e) => { if (e.target === contactOverlay) closeContact(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && contactOverlay.classList.contains('open')) closeContact(); });
+
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // honeypot: bots tend to fill every field, real users never see this one
+  if (contactForm.company.value){ return; }
+
+  contactForm.querySelectorAll('input[required]').forEach(i => i.classList.add('touched'));
+  if (!contactForm.checkValidity()){
+    cfStatus.textContent = 'Please fill in all fields with a valid email.';
+    cfStatus.className = 'contact-status error';
+    return;
+  }
+
+  if (LEAD_WEBHOOK_URL.includes('PASTE_')){
+    cfStatus.textContent = 'Form isn’t connected yet — email hrishank21s@gmail.com directly for now.';
+    cfStatus.className = 'contact-status error';
+    return;
+  }
+
+  cfSubmit.disabled = true;
+  cfStatus.textContent = 'Sending…';
+  cfStatus.className = 'contact-status';
+
+  const data = new FormData();
+  data.append('name', contactForm.name.value.trim());
+  data.append('phone', contactForm.phone.value.trim());
+  data.append('email', contactForm.email.value.trim());
+  data.append('source', window.location.href);
+
+  try {
+    await fetch(LEAD_WEBHOOK_URL, { method: 'POST', mode: 'no-cors', body: data });
+    cfStatus.textContent = 'Thanks! I’ll be in touch shortly.';
+    cfStatus.className = 'contact-status success';
+    contactForm.reset();
+    setTimeout(closeContact, 1800);
+  } catch (err){
+    cfStatus.textContent = 'Something went wrong — please email hrishank21s@gmail.com instead.';
+    cfStatus.className = 'contact-status error';
+  } finally {
+    cfSubmit.disabled = false;
+  }
+});
