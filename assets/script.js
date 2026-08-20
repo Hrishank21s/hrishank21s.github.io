@@ -205,7 +205,7 @@ setInterval(() => {
 
 /* ---- contact modal + lead capture ---- */
 // Set this to your Apps Script Web App URL once deployed (see setup notes in README).
-const LEAD_WEBHOOK_URL = 'PASTE_APPS_SCRIPT_WEB_APP_URL_HERE';
+const LEAD_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbxTRHIZNYl0ABrNOsFroWSOsuyv8dtgLygg9iGoIzsx3oWlcpN_Gj4xl_AC_PcXAiCnKg/exec';
 
 const contactOverlay = document.getElementById('contactOverlay');
 const contactForm = document.getElementById('contactForm');
