@@ -4,122 +4,135 @@
 <title>Hrishank Soni — Software that runs real businesses</title>
 <meta name="description" content="Hrishank Soni builds production software: a club-management SaaS, QR ordering with payments, a tournament platform, an AI agent platform and an offline Android app.">
 <meta property="og:type" content="website"><meta property="og:url" content="https://hrishank21s.github.io/"><meta property="og:title" content="Hrishank Soni — Software that runs real businesses"><meta property="og:description" content="Five shipped products, three live in production. Watch each one run."><meta property="og:image" content="https://hrishank21s.github.io/assets/videos/tabletracker.jpg">
-<meta name="theme-color" content="#07080b">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%2307080b%22/><text x=%2250%22 y=%2268%22 font-size=%2258%22 text-anchor=%22middle%22 fill=%22%237cf2a0%22 font-family=%22sans-serif%22 font-weight=%22700%22>H</text></svg>">
+<meta name="theme-color" content="#08090c">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%2308090c%22/><text x=%2250%22 y=%2268%22 font-size=%2258%22 text-anchor=%22middle%22 fill=%22%237cf2a0%22 font-family=%22sans-serif%22 font-weight=%22700%22>H</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@500&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/style.css">
 <script>document.documentElement.classList.add('js')</script>
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}</script>
 </head><body id="top">
+<a class="skip" href="#products">Skip to products</a>
+<div class="loader" id="loader" aria-hidden="true"><span id="loadN">00</span><i></i></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<div class="cursor" id="cursor" aria-hidden="true"></div>
+
 <header class="nav" id="nav"><div class="nav-in"><a class="logo" href="#top" aria-label="Hrishank Soni"><span>H</span><b>Hrishank Soni</b></a>
 <nav id="dnav" aria-label="Primary"><a href="#products">Products</a><a href="#lab">Lab</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
-<a class="btn small" href="mailto:hrishank21s@gmail.com">Connect with me</a><button class="menu" id="menu" aria-label="Menu" aria-expanded="false"><i></i><i></i></button></div>
+<a class="btn small mag" href="mailto:hrishank21s@gmail.com">Connect with me</a>
+<button class="menu" id="menu" aria-label="Menu" aria-expanded="false"><i></i><i></i></button></div>
 <div class="mnav" id="mnav"><a href="#products">Products</a><a href="#lab">Lab</a><a href="#about">About</a><a href="#contact">Contact</a><a href="https://github.com/Hrishank21s" target="_blank" rel="noopener">GitHub ↗</a></div></header>
+
 <main>
-<section class="hero"><div class="wrap">
-<p class="tag reveal"><i></i>SOFTWARE DEVELOPER · AI BUILDER · MAKER</p>
-<h1 class="reveal">Software that runs<br><em>real businesses.</em></h1>
+<section class="hero" data-shape="sphere" data-color="#7cf2a0">
+<div class="wrap hero-in">
+<p class="tag reveal"><i></i>Software developer · AI builder · maker</p>
+<h1 class="split" aria-label="Software that runs real businesses."><span class="ln">Software</span><span class="ln">that runs</span><span class="ln"><em>real businesses.</em></span></h1>
 <p class="lede reveal">I build and ship complete products: the backend, the interface, the payments and the mobile app. Three run in production for a live snooker and pool venue. Pick one below and watch it work.</p>
-<div class="stats reveal"><div><b data-n="5">0</b><span>products built</span></div><div><b data-n="3">0</b><span>live in production</span></div><div><b data-n="429" data-plus="1">0</b><span>automated tests</span></div><div><b data-n="1">0</b><span>developer</span></div></div>
-<div class="player reveal"><div class="tabs" role="tablist" aria-label="Product reels"><button role="tab" class="tab on" data-v="tabletracker" data-n="TableTracker" data-t="Club management SaaS" data-h="#tabletracker" style="--a:#d9b04a">TableTracker</button><button role="tab" class="tab" data-v="cafe" data-n="Weekend Rush Café" data-t="QR ordering + kitchen app" data-h="#cafe" style="--a:#f5b820">Weekend Rush Café</button><button role="tab" class="tab" data-v="tournament" data-n="Club Tournament" data-t="Tournament platform" data-h="#tournament" style="--a:#2de0b6">Club Tournament</button><button role="tab" class="tab" data-v="agentos" data-n="AgentOS" data-t="AI agent platform" data-h="#agentos" style="--a:#5b8cff">AgentOS</button><button role="tab" class="tab" data-v="kali" data-n="Kali Dinali" data-t="Offline shop app" data-h="#kali" style="--a:#c77dff">Kali Dinali</button></div>
-<div class="screen"><video id="heroVid" muted loop playsinline autoplay preload="metadata" poster="assets/videos/tabletracker.jpg"><source src="assets/videos/tabletracker.mp4" type="video/mp4"></video>
-<div class="screen-bar"><span id="heroName">TableTracker</span><span id="heroType">Club management SaaS</span><a id="heroLink" href="#tabletracker">Full breakdown ↓</a></div></div></div>
-</div></section>
-<section id="products"><div class="wrap sec-head reveal"><p class="tag"><i></i>PRODUCTS</p><h2>Five products, end to end.</h2><p>Each one below has a reel, what it does, how it works, its specifications and the real screens, captured from the running software with demo data.</p></div>
+<div class="hero-cta reveal"><a class="btn mag" href="#products">See the products</a><a class="link" href="https://github.com/Hrishank21s" target="_blank" rel="noopener">GitHub ↗</a></div>
+<div class="scrollhint" aria-hidden="true"><span></span>scroll</div>
+</div>
+<div class="wrap">
+<div class="stats reveal"><div><b data-n="5">0</b><span>products built</span></div><div><b data-n="3">0</b><span>live in production</span></div><div><b data-n="1350" data-plus="1">0</b><span>automated tests</span></div><div><b data-n="1">0</b><span>developer</span></div></div>
+<div class="player" id="player"><div class="tabs" role="tablist" aria-label="Product reels"><button role="tab" class="tab on" aria-selected="true" data-v="tabletracker" data-n="TableTracker" data-t="Club management SaaS" data-h="#tabletracker" style="--a:#d9b04a">TableTracker</button><button role="tab" class="tab" data-v="cafe" data-n="Weekend Rush Café" data-t="QR ordering + kitchen app" data-h="#cafe" style="--a:#f5b820">Weekend Rush Café</button><button role="tab" class="tab" data-v="tournament" data-n="Club Tournament" data-t="Tournament platform" data-h="#tournament" style="--a:#2de0b6">Club Tournament</button><button role="tab" class="tab" data-v="agentos" data-n="AgentOS" data-t="AI agent platform" data-h="#agentos" style="--a:#5b8cff">AgentOS</button><button role="tab" class="tab" data-v="kali" data-n="Kali Dinali" data-t="Offline shop app" data-h="#kali" style="--a:#c77dff">Kali Dinali</button></div>
+<div class="screen-3d"><div class="screen" id="screen"><video id="heroVid" muted loop playsinline autoplay preload="metadata" poster="assets/videos/tabletracker.jpg"><source src="assets/videos/tabletracker.mp4" type="video/mp4"></video>
+<div class="screen-bar"><span id="heroName">TableTracker</span><span id="heroType">Club management SaaS</span><a id="heroLink" href="#tabletracker">Full breakdown ↓</a></div></div></div></div>
+</div>
+</section>
+
+<section id="products">
+<div class="wrap sec-head"><p class="tag reveal"><i></i>Products</p><h2 class="words">Five products, <em>end to end.</em></h2><p class="reveal">Each one below has a reel, what it does, how it works, its specifications and the real screens, captured from the running software with demo data.</p></div>
 <nav class="pnav" aria-label="Products"><div class="wrap"><a href="#tabletracker">TableTracker</a><a href="#cafe">Weekend Rush Café</a><a href="#tournament">Club Tournament</a><a href="#agentos">AgentOS</a><a href="#kali">Kali Dinali</a></div></nav>
-<section class="product" id="tabletracker" style="--a:#d9b04a">
-<div class="wrap">
-<header class="p-head reveal"><span class="p-num">01</span><div><p class="tag"><i></i>LIVE IN PRODUCTION · Club management SaaS</p><h2>TableTracker</h2><p class="p-line">The floor console a snooker and pool club runs on every day: live tables, exact billing, customer ledger and online booking.</p></div></header>
-<div class="p-grid">
-<figure class="vid reveal"><video muted loop playsinline preload="none" poster="assets/videos/tabletracker.jpg" data-src="assets/videos/tabletracker.mp4" aria-label="TableTracker product reel"></video><button class="playbtn" aria-label="Play TableTracker reel">▶</button></figure>
-<div class="p-copy reveal">
-<h3>What it does</h3><ul class="does"><li>Live board of every table with running timer and bill; the bill freezes the instant staff clicks Stop</li><li>Customer ledger with prepaid wallet, dues and Gold-style membership discounts</li><li>Public availability board, online booking flow and self-service balance lookup</li><li>Admin tools: users per floor, analytics, audit log and CSV exports</li></ul>
-<div class="cta-row"><a class="btn ghost" href="https://weekendrush.club" target="_blank" rel="noopener">Visit the live club site ↗</a></div>
-</div></div>
-<div class="p-cols">
-<div class="reveal"><h3>How it works</h3><ol class="how"><li><b>1</b><div><h4>Staff start a session</h4><p>Pick a table, optionally attach a customer; the timer and rate are locked in.</p></div></li><li><b>2</b><div><h4>Time and items bill live</h4><p>Exact proportional time plus refreshments, discounts applied automatically.</p></div></li><li><b>3</b><div><h4>Settle and record</h4><p>Cash, online or wallet; the ledger, dues and analytics update at once.</p></div></li></ol></div>
-<div class="reveal"><h3>Specifications</h3><dl class="specs"><div><dt>Runtime</dt><dd>TypeScript on Cloudflare Workers (Hono)</dd></div><div><dt>Database</dt><dd>Cloudflare D1 (SQLite), additive migrations</dd></div><div><dt>Auth</dt><dd>scrypt password hashes, HMAC-signed sessions, CSRF tokens</dd></div><div><dt>Money</dt><dd>Integer paise, exact proportional billing, no minimum charge</dd></div><div><dt>Tests</dt><dd>Vitest inside the Workers runtime</dd></div><div><dt>Rewrite</dt><dd>Ported from Python/Pyodide with a parity harness against the original</dd></div></dl></div>
-</div>
-<div class="gallery reveal"><div class="stage"><img id="g-tabletracker" src="assets/shots/tabletracker/floor.jpg" alt="Live floor console" loading="lazy"><p class="cap">Live floor console</p></div><div class="thumbs" role="group" aria-label="TableTracker screens"><button class="th on" data-src="assets/shots/tabletracker/floor.jpg" data-cap="Live floor console" aria-label="Live floor console"><img src="assets/shots/tabletracker/floor.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/tabletracker/customers.jpg" data-cap="Customer ledger" aria-label="Customer ledger"><img src="assets/shots/tabletracker/customers.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/tabletracker/board.jpg" data-cap="Public availability board" aria-label="Public availability board"><img src="assets/shots/tabletracker/board.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/tabletracker/analytics.jpg" data-cap="Revenue analytics" aria-label="Revenue analytics"><img src="assets/shots/tabletracker/analytics.jpg" alt="" loading="lazy"></button></div></div>
-<p class="note reveal">Screens captured from a local build with demo data.</p>
-</div></section><section class="product" id="cafe" style="--a:#f5b820">
-<div class="wrap">
-<header class="p-head reveal"><span class="p-num">02</span><div><p class="tag"><i></i>LIVE IN PRODUCTION · QR ordering + kitchen app</p><h2>Weekend Rush Café</h2><p class="p-line">Guests scan a floor QR, order and pay; the chef&#x27;s phone rings until the order is started; the owner sees exact sales.</p></div></header>
-<div class="p-grid">
-<figure class="vid reveal"><video muted loop playsinline preload="none" poster="assets/videos/cafe.jpg" data-src="assets/videos/cafe.mp4" aria-label="Weekend Rush Café product reel"></video><button class="playbtn" aria-label="Play Weekend Rush Café reel">▶</button></figure>
-<div class="p-copy reveal">
-<h3>What it does</h3><ul class="does"><li>Mobile QR menu per floor (62 items, categories, cart) with Cashfree checkout</li><li>Chef dashboard (PWA) and a native Android app that rings until START is tapped</li><li>Owner dashboard: daily and monthly sales, best sellers, refunds, users, kitchen on/off</li><li>Paid orders are immutable and reports use the IST business day</li></ul>
-<div class="cta-row"><a class="btn ghost" href="https://github.com/Hrishank21s/weekendrush-cafe-app" target="_blank" rel="noopener">Staff app downloads ↗</a></div>
-</div></div>
-<div class="p-cols">
-<div class="reveal"><h3>How it works</h3><ol class="how"><li><b>1</b><div><h4>Scan and order</h4><p>Each floor has its own QR; guests pick items and enter a name.</p></div></li><li><b>2</b><div><h4>Pay, then confirm</h4><p>An order becomes paid only after Cashfree&#x27;s own API confirms the payment.</p></div></li><li><b>3</b><div><h4>Kitchen rings</h4><p>The chef gets a push and a ringing alert; tapping START stops it.</p></div></li></ol></div>
-<div class="reveal"><h3>Specifications</h3><dl class="specs"><div><dt>Runtime</dt><dd>Hono Worker + D1 + React/Vite PWA, one deployment</dd></div><div><dt>Payments</dt><dd>Cashfree PG, server-side settlement check</dd></div><div><dt>Push</dt><dd>Own VAPID keys, RFC 8291 on WebCrypto</dd></div><div><dt>Android</dt><dd>Native Kotlin app, watches the kitchen list, no Firebase account needed</dd></div><div><dt>Integrity</dt><dd>Paid orders and items locked by DB triggers; money in integer paise</dd></div><div><dt>Quality</dt><dd>141 automated tests on real D1 migrations; runs on the Cloudflare free tier</dd></div></dl></div>
-</div>
-<div class="gallery reveal"><div class="stage"><img id="g-cafe" src="assets/shots/cafe/dashboard.jpg" alt="Owner dashboard" loading="lazy"><p class="cap">Owner dashboard</p></div><div class="thumbs" role="group" aria-label="Weekend Rush Café screens"><button class="th on" data-src="assets/shots/cafe/dashboard.jpg" data-cap="Owner dashboard" aria-label="Owner dashboard"><img src="assets/shots/cafe/dashboard.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/cafe/menu.jpg" data-cap="Guest QR menu" aria-label="Guest QR menu"><img src="assets/shots/cafe/menu.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/cafe/chef.jpg" data-cap="Chef kitchen screen" aria-label="Chef kitchen screen"><img src="assets/shots/cafe/chef.jpg" alt="" loading="lazy"></button></div></div>
-<p class="note reveal">Screens captured from a local build with the built-in payment simulator and demo customers.</p>
-</div></section><section class="product" id="tournament" style="--a:#2de0b6">
-<div class="wrap">
-<header class="p-head reveal"><span class="p-num">03</span><div><p class="tag"><i></i>LIVE IN PRODUCTION · Tournament platform</p><h2>Club Tournament</h2><p class="p-line">A pool-tournament platform: registration, payments, automatic brackets, live matches and champion tracking.</p></div></header>
-<div class="p-grid">
-<figure class="vid reveal"><video muted loop playsinline preload="none" poster="assets/videos/tournament.jpg" data-src="assets/videos/tournament.mp4" aria-label="Club Tournament product reel"></video><button class="playbtn" aria-label="Play Club Tournament reel">▶</button></figure>
-<div class="p-copy reveal">
-<h3>What it does</h3><ul class="does"><li>Player registration with Cashfree payments and verified webhooks</li><li>Single-elimination bracket generated and locked automatically</li><li>Per-match status (scheduled, live, completed) with automatic winner progression</li><li>Public tournament page with the live bracket, plus an admin console</li></ul>
-<div class="cta-row"></div>
-</div></div>
-<div class="p-cols">
-<div class="reveal"><h3>How it works</h3><ol class="how"><li><b>1</b><div><h4>Register and pay</h4><p>Players sign up; confirmed payments fill the draw.</p></div></li><li><b>2</b><div><h4>Generate and lock</h4><p>The bracket is built once registration closes.</p></div></li><li><b>3</b><div><h4>Run matches</h4><p>Start a match, enter the result, winners advance to the final.</p></div></li></ol></div>
-<div class="reveal"><h3>Specifications</h3><dl class="specs"><div><dt>Runtime</dt><dd>TypeScript Cloudflare Worker + D1</dd></div><div><dt>Payments</dt><dd>Cashfree with verified webhooks</dd></div><div><dt>Bracket</dt><dd>Single elimination, generated and locked from confirmed players</dd></div><div><dt>Ops</dt><dd>Live status, champion display, admin password change</dd></div><div><dt>Quality</dt><dd>179 automated tests, strict type-check</dd></div><div><dt>Status</dt><dd>Production, verified end to end with a real payment</dd></div></dl></div>
-</div>
-<div class="gallery reveal"><div class="stage"><img id="g-tournament" src="assets/shots/tournament/bracket.jpg" alt="Public bracket" loading="lazy"><p class="cap">Public bracket</p></div><div class="thumbs" role="group" aria-label="Club Tournament screens"><button class="th on" data-src="assets/shots/tournament/bracket.jpg" data-cap="Public bracket" aria-label="Public bracket"><img src="assets/shots/tournament/bracket.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/tournament/manage.jpg" data-cap="Manage tournament" aria-label="Manage tournament"><img src="assets/shots/tournament/manage.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/tournament/fixture.jpg" data-cap="Fixture and results" aria-label="Fixture and results"><img src="assets/shots/tournament/fixture.jpg" alt="" loading="lazy"></button></div></div>
-<p class="note reveal">Screens captured from a local build with a demo tournament.</p>
-</div></section><section class="product" id="agentos" style="--a:#5b8cff">
-<div class="wrap">
-<header class="p-head reveal"><span class="p-num">04</span><div><p class="tag"><i></i>OPEN SOURCE · MIT · AI agent platform</p><h2>AgentOS</h2><p class="p-line">A self-hosted team of AI agents for macOS, with approvals, memory and automations, and the OpenCode CLI as a swappable brain.</p></div></header>
-<div class="p-grid">
-<figure class="vid reveal"><video muted loop playsinline preload="none" poster="assets/videos/agentos.jpg" data-src="assets/videos/agentos.mp4" aria-label="AgentOS product reel"></video><button class="playbtn" aria-label="Play AgentOS reel">▶</button></figure>
-<div class="p-copy reveal">
-<h3>What it does</h3><ul class="does"><li>Multi-agent runtime with per-agent prompts, models, permissions and timeouts</li><li>Approval engine: risky commands (sudo, rm, dd and friends) always wait for a human</li><li>Long-term memory with full-text search, projects, notes and chat</li><li>Cron and interval automations, crash recovery and a real-time dashboard</li></ul>
-<div class="cta-row"><a class="btn ghost" href="https://github.com/Hrishank21s/DIY-agent-OS" target="_blank" rel="noopener">View source on GitHub ↗</a></div>
-</div></div>
-<div class="p-cols">
-<div class="reveal"><h3>How it works</h3><ol class="how"><li><b>1</b><div><h4>Queue a task</h4><p>Priority queue with concurrency limits, progress logs and cancel/retry.</p></div></li><li><b>2</b><div><h4>Compose the prompt</h4><p>Agent instructions, project context, notes and relevant memories.</p></div></li><li><b>3</b><div><h4>Run and audit</h4><p>The brain executes; approvals, output and logs stream to the dashboard.</p></div></li></ol></div>
-<div class="reveal"><h3>Specifications</h3><dl class="specs"><div><dt>Backend</dt><dd>Fastify + TypeScript, SQLite (FTS5)</dd></div><div><dt>Frontend</dt><dd>React 18 + Vite, server-sent events</dd></div><div><dt>Security</dt><dd>scrypt (N=65536), lockout, rate limits, no shell execution</dd></div><div><dt>Execution</dt><dd>spawn with argv only, shell disabled</dd></div><div><dt>Quality</dt><dd>109 tests</dd></div><div><dt>License</dt><dd>MIT</dd></div></dl></div>
-</div>
-<div class="gallery reveal"><div class="stage"><img id="g-agentos" src="assets/shots/agentos/agents.jpg" alt="Agents and permissions" loading="lazy"><p class="cap">Agents and permissions</p></div><div class="thumbs" role="group" aria-label="AgentOS screens"><button class="th on" data-src="assets/shots/agentos/agents.jpg" data-cap="Agents and permissions" aria-label="Agents and permissions"><img src="assets/shots/agentos/agents.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/agentos/automations.jpg" data-cap="Automations" aria-label="Automations"><img src="assets/shots/agentos/automations.jpg" alt="" loading="lazy"></button></div></div>
-<p class="note reveal">Screens captured from a fresh instance with demo data.</p>
-</div></section><section class="product" id="kali" style="--a:#c77dff">
-<div class="wrap">
-<header class="p-head reveal"><span class="p-num">05</span><div><p class="tag"><i></i>SHIPPED · ANDROID · Offline shop app</p><h2>Kali Dinali</h2><p class="p-line">An offline Android app for a small shop: sales, stock and a customer ledger that work with no internet.</p></div></header>
-<div class="p-grid">
-<figure class="vid reveal"><video muted loop playsinline preload="none" poster="assets/videos/kali.jpg" data-src="assets/videos/kali.mp4" aria-label="Kali Dinali product reel"></video><button class="playbtn" aria-label="Play Kali Dinali reel">▶</button></figure>
-<div class="p-copy reveal">
-<h3>What it does</h3><ul class="does"><li>Sell by box or loose unit, take part payments and keep the balance</li><li>Stock kept in boxes with loose units tracked automatically</li><li>Customer dues and payments, with a lock screen and backup / restore</li><li>Distributed as signed release builds</li></ul>
-<div class="cta-row"><a class="btn ghost" href="https://github.com/Hrishank21s/kali-dinali-releases" target="_blank" rel="noopener">Download releases ↗</a></div>
-</div></div>
-<div class="p-cols">
-<div class="reveal"><h3>How it works</h3><ol class="how"><li><b>1</b><div><h4>Set up products</h4><p>Box price, loose price and units per box, once.</p></div></li><li><b>2</b><div><h4>Record a sale</h4><p>Pick customer and product, enter what was paid now.</p></div></li><li><b>3</b><div><h4>Track the rest</h4><p>Stock drops and the customer&#x27;s due updates instantly.</p></div></li></ol></div>
-<div class="reveal"><h3>Specifications</h3><dl class="specs"><div><dt>Platform</dt><dd>Native Android (Java)</dd></div><div><dt>Storage</dt><dd>On-device local database, fully offline</dd></div><div><dt>Screens</dt><dd>Sales, Inventory, Customers, Management, Backup / Restore</dd></div><div><dt>Security</dt><dd>App lock screen</dd></div><div><dt>Release</dt><dd>Signed APKs on GitHub Releases</dd></div></dl></div>
-</div>
+
+<section class="product" id="tabletracker" style="--a:#d9b04a" data-shape="table" data-color="#d9b04a"><div class="wrap">
+<span class="ghostnum" aria-hidden="true">01</span>
+<header class="p-head"><p class="tag reveal"><i></i>Live in production · Club management SaaS</p><h2 class="words">TableTracker</h2><p class="p-line reveal">The floor console a snooker and pool club runs on every day: live tables, exact billing, customer ledger and online booking.</p></header>
+<div class="p-grid"><figure class="vid tilt reveal"><video muted loop playsinline preload="none" poster="assets/videos/tabletracker.jpg" data-src="assets/videos/tabletracker.mp4" aria-label="TableTracker product reel"></video><button class="playbtn" aria-label="Play TableTracker reel">▶</button><i class="glare"></i></figure>
+<div class="p-copy"><h3 class="reveal">What it does</h3><ul class="does"><li>Live board of every table with running timer and bill; the bill freezes the instant staff clicks Stop</li><li>Customer ledger with prepaid wallet, dues and Gold-style membership discounts</li><li>Public availability board, online booking flow and self-service balance lookup</li><li>Admin tools: users per floor, analytics, audit log and CSV exports</li></ul>
+<div class="cta-row reveal"><a class="btn ghost mag" href="https://weekendrush.club" target="_blank" rel="noopener">Visit the live club site ↗</a></div></div></div>
+<div class="p-cols"><div><h3 class="reveal">How it works</h3><ol class="how"><li><b>1</b><div><h4>Staff start a session</h4><p>Pick a table, optionally attach a customer; the timer and rate are locked in.</p></div></li><li><b>2</b><div><h4>Time and items bill live</h4><p>Exact proportional time plus refreshments, discounts applied automatically.</p></div></li><li><b>3</b><div><h4>Settle and record</h4><p>Cash, online or wallet; the ledger, dues and analytics update at once.</p></div></li></ol></div>
+<div><h3 class="reveal">Specifications</h3><dl class="specs"><div><dt>Runtime</dt><dd>TypeScript on Cloudflare Workers (Hono)</dd></div><div><dt>Database</dt><dd>Cloudflare D1 (SQLite), additive migrations</dd></div><div><dt>Auth</dt><dd>scrypt password hashes, HMAC-signed sessions, CSRF tokens</dd></div><div><dt>Money</dt><dd>Integer paise, exact proportional billing, no minimum charge</dd></div><div><dt>Tests</dt><dd>Vitest inside the Workers runtime</dd></div><div><dt>Rewrite</dt><dd>Ported from Python/Pyodide with a parity harness against the original</dd></div></dl></div></div>
+<div class="gallery reveal"><div class="stage tilt"><img id="g-tabletracker" src="assets/shots/tabletracker/floor.jpg" alt="Live floor console" loading="lazy"><p class="cap">Live floor console</p><i class="glare"></i></div><div class="thumbs" role="group" aria-label="TableTracker screens"><button class="th on" data-src="assets/shots/tabletracker/floor.jpg" data-cap="Live floor console" aria-label="Live floor console"><img src="assets/shots/tabletracker/floor.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/tabletracker/customers.jpg" data-cap="Customer ledger" aria-label="Customer ledger"><img src="assets/shots/tabletracker/customers.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/tabletracker/board.jpg" data-cap="Public availability board" aria-label="Public availability board"><img src="assets/shots/tabletracker/board.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/tabletracker/analytics.jpg" data-cap="Revenue analytics" aria-label="Revenue analytics"><img src="assets/shots/tabletracker/analytics.jpg" alt="" loading="lazy"></button></div></div>
+<p class="note">Screens captured from a local build with demo data.</p>
+</div></section>
+
+<section class="product" id="cafe" style="--a:#f5b820" data-shape="torus" data-color="#f5b820"><div class="wrap">
+<span class="ghostnum" aria-hidden="true">02</span>
+<header class="p-head"><p class="tag reveal"><i></i>Live in production · QR ordering + kitchen app</p><h2 class="words">Weekend Rush Café</h2><p class="p-line reveal">Guests scan a floor QR, order and pay; the chef's phone rings until the order is started; the owner sees exact sales.</p></header>
+<div class="p-grid"><figure class="vid tilt reveal"><video muted loop playsinline preload="none" poster="assets/videos/cafe.jpg" data-src="assets/videos/cafe.mp4" aria-label="Weekend Rush Café product reel"></video><button class="playbtn" aria-label="Play Weekend Rush Café reel">▶</button><i class="glare"></i></figure>
+<div class="p-copy"><h3 class="reveal">What it does</h3><ul class="does"><li>Mobile QR menu per floor (62 items, categories, cart) with Cashfree checkout</li><li>Chef dashboard (PWA) and a native Android app that rings until START is tapped</li><li>Owner dashboard: daily and monthly sales, best sellers, refunds, users, kitchen on/off</li><li>Paid orders are immutable and reports use the IST business day</li></ul>
+<div class="cta-row reveal"><a class="btn ghost mag" href="https://github.com/Hrishank21s/weekendrush-cafe-app" target="_blank" rel="noopener">Staff app downloads ↗</a></div></div></div>
+<div class="p-cols"><div><h3 class="reveal">How it works</h3><ol class="how"><li><b>1</b><div><h4>Scan and order</h4><p>Each floor has its own QR; guests pick items and enter a name.</p></div></li><li><b>2</b><div><h4>Pay, then confirm</h4><p>An order becomes paid only after Cashfree's own API confirms the payment.</p></div></li><li><b>3</b><div><h4>Kitchen rings</h4><p>The chef gets a push and a ringing alert; tapping START stops it.</p></div></li></ol></div>
+<div><h3 class="reveal">Specifications</h3><dl class="specs"><div><dt>Runtime</dt><dd>Hono Worker + D1 + React/Vite PWA, one deployment</dd></div><div><dt>Payments</dt><dd>Cashfree PG, server-side settlement check</dd></div><div><dt>Push</dt><dd>Own VAPID keys, RFC 8291 on WebCrypto</dd></div><div><dt>Android</dt><dd>Native Kotlin app, watches the kitchen list, no Firebase account needed</dd></div><div><dt>Integrity</dt><dd>Paid orders and items locked by DB triggers; money in integer paise</dd></div><div><dt>Quality</dt><dd>141 automated tests on real D1 migrations; runs on the Cloudflare free tier</dd></div></dl></div></div>
+<div class="gallery reveal"><div class="stage tilt"><img id="g-cafe" src="assets/shots/cafe/dashboard.jpg" alt="Owner dashboard" loading="lazy"><p class="cap">Owner dashboard</p><i class="glare"></i></div><div class="thumbs" role="group" aria-label="Weekend Rush Café screens"><button class="th on" data-src="assets/shots/cafe/dashboard.jpg" data-cap="Owner dashboard" aria-label="Owner dashboard"><img src="assets/shots/cafe/dashboard.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/cafe/menu.jpg" data-cap="Guest QR menu" aria-label="Guest QR menu"><img src="assets/shots/cafe/menu.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/cafe/chef.jpg" data-cap="Chef kitchen screen" aria-label="Chef kitchen screen"><img src="assets/shots/cafe/chef.jpg" alt="" loading="lazy"></button></div></div>
+<p class="note">Screens captured from a local build with the built-in payment simulator and demo customers.</p>
+</div></section>
+
+<section class="product" id="tournament" style="--a:#2de0b6" data-shape="pyramid" data-color="#2de0b6"><div class="wrap">
+<span class="ghostnum" aria-hidden="true">03</span>
+<header class="p-head"><p class="tag reveal"><i></i>Live in production · Tournament platform</p><h2 class="words">Club Tournament</h2><p class="p-line reveal">A pool-tournament platform: registration, payments, automatic brackets, live matches and champion tracking.</p></header>
+<div class="p-grid"><figure class="vid tilt reveal"><video muted loop playsinline preload="none" poster="assets/videos/tournament.jpg" data-src="assets/videos/tournament.mp4" aria-label="Club Tournament product reel"></video><button class="playbtn" aria-label="Play Club Tournament reel">▶</button><i class="glare"></i></figure>
+<div class="p-copy"><h3 class="reveal">What it does</h3><ul class="does"><li>Player registration with Cashfree payments and verified webhooks</li><li>Single-elimination bracket generated and locked automatically</li><li>Per-match status (scheduled, live, completed) with automatic winner progression</li><li>Public tournament page with the live bracket, plus an admin console</li></ul></div></div>
+<div class="p-cols"><div><h3 class="reveal">How it works</h3><ol class="how"><li><b>1</b><div><h4>Register and pay</h4><p>Players sign up; confirmed payments fill the draw.</p></div></li><li><b>2</b><div><h4>Generate and lock</h4><p>The bracket is built once registration closes.</p></div></li><li><b>3</b><div><h4>Run matches</h4><p>Start a match, enter the result, winners advance to the final.</p></div></li></ol></div>
+<div><h3 class="reveal">Specifications</h3><dl class="specs"><div><dt>Runtime</dt><dd>TypeScript Cloudflare Worker + D1</dd></div><div><dt>Payments</dt><dd>Cashfree with verified webhooks</dd></div><div><dt>Bracket</dt><dd>Single elimination, generated and locked from confirmed players</dd></div><div><dt>Ops</dt><dd>Live status, champion display, admin password change</dd></div><div><dt>Quality</dt><dd>179 automated tests, strict type-check</dd></div><div><dt>Status</dt><dd>Production, verified end to end with a real payment</dd></div></dl></div></div>
+<div class="gallery reveal"><div class="stage tilt"><img id="g-tournament" src="assets/shots/tournament/bracket.jpg" alt="Public bracket" loading="lazy"><p class="cap">Public bracket</p><i class="glare"></i></div><div class="thumbs" role="group" aria-label="Club Tournament screens"><button class="th on" data-src="assets/shots/tournament/bracket.jpg" data-cap="Public bracket" aria-label="Public bracket"><img src="assets/shots/tournament/bracket.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/tournament/manage.jpg" data-cap="Manage tournament" aria-label="Manage tournament"><img src="assets/shots/tournament/manage.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/tournament/fixture.jpg" data-cap="Fixture and results" aria-label="Fixture and results"><img src="assets/shots/tournament/fixture.jpg" alt="" loading="lazy"></button></div></div>
+<p class="note">Screens captured from a local build with a demo tournament.</p>
+</div></section>
+
+<section class="product" id="agentos" style="--a:#5b8cff" data-shape="ico" data-color="#5b8cff"><div class="wrap">
+<span class="ghostnum" aria-hidden="true">04</span>
+<header class="p-head"><p class="tag reveal"><i></i>Open source · MIT · AI agent platform</p><h2 class="words">AgentOS</h2><p class="p-line reveal">A self-hosted team of AI agents for macOS, with approvals, memory and automations, and the OpenCode CLI as a swappable brain.</p></header>
+<div class="p-grid"><figure class="vid tilt reveal"><video muted loop playsinline preload="none" poster="assets/videos/agentos.jpg" data-src="assets/videos/agentos.mp4" aria-label="AgentOS product reel"></video><button class="playbtn" aria-label="Play AgentOS reel">▶</button><i class="glare"></i></figure>
+<div class="p-copy"><h3 class="reveal">What it does</h3><ul class="does"><li>Multi-agent runtime with per-agent prompts, models, permissions and timeouts</li><li>Approval engine: risky commands (sudo, rm, dd and friends) always wait for a human</li><li>Long-term memory with full-text search, projects, notes and chat</li><li>Cron and interval automations, crash recovery and a real-time dashboard</li></ul>
+<div class="cta-row reveal"><a class="btn ghost mag" href="https://github.com/Hrishank21s/DIY-agent-OS" target="_blank" rel="noopener">View source on GitHub ↗</a></div></div></div>
+<div class="p-cols"><div><h3 class="reveal">How it works</h3><ol class="how"><li><b>1</b><div><h4>Queue a task</h4><p>Priority queue with concurrency limits, progress logs and cancel/retry.</p></div></li><li><b>2</b><div><h4>Compose the prompt</h4><p>Agent instructions, project context, notes and relevant memories.</p></div></li><li><b>3</b><div><h4>Run and audit</h4><p>The brain executes; approvals, output and logs stream to the dashboard.</p></div></li></ol></div>
+<div><h3 class="reveal">Specifications</h3><dl class="specs"><div><dt>Backend</dt><dd>Fastify + TypeScript, SQLite (FTS5)</dd></div><div><dt>Frontend</dt><dd>React 18 + Vite, server-sent events</dd></div><div><dt>Security</dt><dd>scrypt (N=65536), lockout, rate limits, no shell execution</dd></div><div><dt>Execution</dt><dd>spawn with argv only, shell disabled</dd></div><div><dt>Quality</dt><dd>109 tests</dd></div><div><dt>License</dt><dd>MIT</dd></div></dl></div></div>
+<div class="gallery reveal"><div class="stage tilt"><img id="g-agentos" src="assets/shots/agentos/agents.jpg" alt="Agents and permissions" loading="lazy"><p class="cap">Agents and permissions</p><i class="glare"></i></div><div class="thumbs" role="group" aria-label="AgentOS screens"><button class="th on" data-src="assets/shots/agentos/agents.jpg" data-cap="Agents and permissions" aria-label="Agents and permissions"><img src="assets/shots/agentos/agents.jpg" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/agentos/automations.jpg" data-cap="Automations" aria-label="Automations"><img src="assets/shots/agentos/automations.jpg" alt="" loading="lazy"></button></div></div>
+<p class="note">Screens captured from a fresh instance with demo data.</p>
+</div></section>
+
+<section class="product" id="kali" style="--a:#c77dff" data-shape="phone" data-color="#c77dff"><div class="wrap">
+<span class="ghostnum" aria-hidden="true">05</span>
+<header class="p-head"><p class="tag reveal"><i></i>Shipped · Android · Offline shop app</p><h2 class="words">Kali Dinali</h2><p class="p-line reveal">An offline Android app for a small shop: sales, stock and a customer ledger that work with no internet.</p></header>
+<div class="p-grid"><figure class="vid tilt reveal"><video muted loop playsinline preload="none" poster="assets/videos/kali.jpg" data-src="assets/videos/kali.mp4" aria-label="Kali Dinali product reel"></video><button class="playbtn" aria-label="Play Kali Dinali reel">▶</button><i class="glare"></i></figure>
+<div class="p-copy"><h3 class="reveal">What it does</h3><ul class="does"><li>Sell by box or loose unit, take part payments and keep the balance</li><li>Stock kept in boxes with loose units tracked automatically</li><li>Customer dues and payments, with a lock screen and backup / restore</li><li>Distributed as signed release builds</li></ul>
+<div class="cta-row reveal"><a class="btn ghost mag" href="https://github.com/Hrishank21s/kali-dinali-releases" target="_blank" rel="noopener">Download releases ↗</a></div></div></div>
+<div class="p-cols"><div><h3 class="reveal">How it works</h3><ol class="how"><li><b>1</b><div><h4>Set up products</h4><p>Box price, loose price and units per box, once.</p></div></li><li><b>2</b><div><h4>Record a sale</h4><p>Pick customer and product, enter what was paid now.</p></div></li><li><b>3</b><div><h4>Track the rest</h4><p>Stock drops and the customer's due updates instantly.</p></div></li></ol></div>
+<div><h3 class="reveal">Specifications</h3><dl class="specs"><div><dt>Platform</dt><dd>Native Android (Java)</dd></div><div><dt>Storage</dt><dd>On-device local database, fully offline</dd></div><div><dt>Screens</dt><dd>Sales, Inventory, Customers, Management, Backup / Restore</dd></div><div><dt>Security</dt><dd>App lock screen</dd></div><div><dt>Release</dt><dd>Signed APKs on GitHub Releases</dd></div></dl></div></div>
 <div class="gallery reveal phone"><div class="stage"><img id="g-kali" src="assets/shots/kali/sales.png" alt="Sales" loading="lazy"><p class="cap">Sales</p></div><div class="thumbs" role="group" aria-label="Kali Dinali screens"><button class="th on" data-src="assets/shots/kali/sales.png" data-cap="Sales" aria-label="Sales"><img src="assets/shots/kali/sales.png" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/kali/inv.png" data-cap="Inventory" aria-label="Inventory"><img src="assets/shots/kali/inv.png" alt="" loading="lazy"></button><button class="th" data-src="assets/shots/kali/cus.png" data-cap="Customers" aria-label="Customers"><img src="assets/shots/kali/cus.png" alt="" loading="lazy"></button></div></div>
-<p class="note reveal">Illustrative screens: a recreation built from the app&#x27;s real screen layout and labels, not a device capture.</p>
+<p class="note">Illustrative screens: a recreation built from the app's real screen layout and labels, not a device capture.</p>
 </div></section>
 </section>
-<section class="lab" id="lab"><div class="wrap">
-<div class="sec-head reveal"><p class="tag"><i></i>IN PROGRESS &amp; THE LAB</p><h2>What I’m building next.</h2></div>
+
+<section class="lab" id="lab" data-shape="helix" data-color="#7cf2a0"><div class="wrap">
+<div class="sec-head"><p class="tag reveal"><i></i>In progress &amp; the lab</p><h2 class="words">What I’m building <em>next.</em></h2></div>
 <div class="lab-grid">
-<article class="card reveal"><span class="pill">IN DEVELOPMENT</span><h3>Table Tracker v10</h3><p>A clean-slate multi-tenant rebuild for venues that rent out resources (snooker, pool, PlayStation, bowling): companies with many branches, each with its own pricing, staff and memberships, no code change per game type.</p><p class="mono">Fastify · TypeScript · PostgreSQL · raw SQL · tenant isolation enforced in every query</p></article>
-<article class="card reveal"><span class="pill">HARDWARE</span><h3>Embedded &amp; electronics</h3><p>ESP microcontroller projects: a Bluetooth presence scanner, 433 MHz button monitors and diagnostics, small physical systems wired to software.</p><p class="mono">ESP · BLE · RF433 · Arduino</p></article>
-<article class="card reveal"><span class="pill">EXPERIMENTS</span><h3>Automation &amp; research</h3><p>Side projects built to learn: a trading-research bot, a voice assistant and a home server.</p></article>
+<article class="card tilt"><span class="flag">In development</span><h3>Table Tracker v10</h3><p>A clean-slate multi-tenant rebuild for venues that rent out resources (snooker, pool, PlayStation, bowling): companies with many branches, each with its own pricing, staff and memberships, no code change per game type.</p><p class="mono">Fastify · TypeScript · PostgreSQL · raw SQL · tenant isolation enforced in every query</p><i class="glare"></i></article>
+<article class="card tilt"><span class="flag">Hardware</span><h3>Embedded &amp; electronics</h3><p>ESP microcontroller projects: a Bluetooth presence scanner, 433 MHz button monitors and diagnostics, small physical systems wired to software.</p><p class="mono">ESP · BLE · RF433 · Arduino</p><i class="glare"></i></article>
+<article class="card tilt"><span class="flag">Experiments</span><h3>Automation &amp; research</h3><p>Side projects built to learn: a trading-research bot, a voice assistant and a home server.</p><i class="glare"></i></article>
 </div></div></section>
-<section class="about" id="about"><div class="wrap about-grid">
-<div class="reveal"><p class="tag"><i></i>ABOUT</p><h2>Hi, I’m Hrishank.</h2></div>
-<div class="reveal"><p class="big">I turn a real problem into a product people use every day, then keep it running.</p>
-<p>My work starts at a real counter: a club that needs exact billing, a café that needs orders to reach the kitchen, a shop with no signal. I design the data model, write the backend, build the interface and the Android app, connect payments, and deploy on infrastructure cheap enough for a small business to keep.</p>
-<p>I work with AI coding agents inside strict guardrails: every change passes type-checks and tests before it ships, money is handled as integers, and anything touching payments or authentication gets a security review.</p>
-<div class="principles"><div><b>01</b><span>Correctness before cleverness</span></div><div><b>02</b><span>Small, boring, reliable stacks</span></div><div><b>03</b><span>Ship, watch it run, improve</span></div></div>
-<h3 class="stack-h">Toolbox</h3><div class="chips"><span>TypeScript</span><span>Cloudflare Workers</span><span>D1 / SQLite</span><span>PostgreSQL</span><span>React</span><span>Hono</span><span>Fastify</span><span>Android (Kotlin/Java)</span><span>Cashfree payments</span><span>Web Push</span><span>ESP / Arduino</span><span>Python</span></div></div>
+
+<section class="about" id="about" data-shape="knot" data-color="#7cf2a0">
+<div class="wrap about-grid"><div><p class="tag reveal"><i></i>About</p><h2 class="words">Hi, I’m <em>Hrishank.</em></h2></div>
+<div><p class="big reveal">I turn a real problem into a product people use every day, then keep it running.</p>
+<p class="reveal">My work starts at a real counter: a club that needs exact billing, a café that needs orders to reach the kitchen, a shop with no signal. I design the data model, write the backend, build the interface and the Android app, connect payments, and deploy on infrastructure cheap enough for a small business to keep.</p>
+<p class="reveal">I work with AI coding agents inside strict guardrails: every change passes type-checks and tests before it ships, money is handled as integers, and anything touching payments or authentication gets a security review.</p>
+<div class="principles reveal"><div><b>01</b><span>Correctness before cleverness</span></div><div><b>02</b><span>Small, boring, reliable stacks</span></div><div><b>03</b><span>Ship, watch it run, improve</span></div></div></div></div>
+<h3 class="wrap stack-h">Toolbox</h3>
+<div class="marquee" aria-label="Toolbox"><div class="mq-track"><span>TypeScript</span><span>Cloudflare Workers</span><span>D1 / SQLite</span><span>PostgreSQL</span><span>React</span><span>Hono</span><span>Fastify</span><span>Android (Kotlin/Java)</span><span>Cashfree payments</span><span>Web Push</span><span>ESP / Arduino</span><span>Python</span></div></div>
+</section>
+
+<section class="contact" id="contact" data-shape="sphere" data-color="#7cf2a0"><div class="wrap">
+<h2 class="words">Have something <em>to build?</em></h2>
+<p class="reveal">Tell me the problem. I’ll tell you what it takes.</p>
+<div class="cta-row center reveal"><a class="btn big mag" href="mailto:hrishank21s@gmail.com">Connect with me</a><a class="btn ghost big mag" href="https://github.com/Hrishank21s" target="_blank" rel="noopener">GitHub ↗</a></div>
 </div></section>
-<section class="contact" id="contact"><div class="wrap reveal"><h2>Have something to build?</h2><p>Tell me the problem. I’ll tell you what it takes.</p><div class="cta-row center"><a class="btn big" href="mailto:hrishank21s@gmail.com">Connect with me</a><a class="btn ghost big" href="https://github.com/Hrishank21s" target="_blank" rel="noopener">GitHub ↗</a></div></div></section>
 </main>
 <footer><div class="wrap foot"><span>© <span id="year"></span> Hrishank Soni</span><a href="mailto:hrishank21s@gmail.com">hrishank21s@gmail.com</a></div></footer>
-<script src="assets/script.js"></script></body></html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script type="module" src="assets/script.js"></script>
+</body></html>
