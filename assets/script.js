@@ -126,7 +126,8 @@ async function initGL(){
     ico:sample(new THREE.IcosahedronGeometry(2.5,0)),
     phone:sample(new THREE.BoxGeometry(1.9,3.8,.28)),
     helix:helix(),
-    knot:sample(new THREE.TorusKnotGeometry(1.5,.42,220,24))
+    knot:sample(new THREE.TorusKnotGeometry(1.5,.42,220,24)),
+    keyboard:sample(new THREE.BoxGeometry(5.6,.25,1.9).rotateX(.9).rotateZ(-.12))
   };
 
   const geo=new THREE.BufferGeometry(),pos=new Float32Array(N*3),rnd=new Float32Array(N),spd=new Float32Array(N);
