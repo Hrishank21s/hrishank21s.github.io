@@ -125,6 +125,7 @@ async function initGL(){
     pyramid:sample(new THREE.ConeGeometry(2.3,3.4,4)),
     ico:sample(new THREE.IcosahedronGeometry(2.5,0)),
     phone:sample(new THREE.BoxGeometry(1.9,3.8,.28)),
+    lens:sample(new THREE.CylinderGeometry(2.1,2.35,1.3,64).rotateX(1.2).rotateZ(-.25)),
     helix:helix(),
     knot:sample(new THREE.TorusKnotGeometry(1.5,.42,220,24)),
     keyboard:sample(new THREE.BoxGeometry(5.6,.25,1.9).rotateX(.9).rotateZ(-.12))
